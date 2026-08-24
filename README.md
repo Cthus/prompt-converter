@@ -1,12 +1,14 @@
 # prompt-converter
 
+**Language:** [English](README.en.md) | [日本語](README.ja.md) | [Español](README.es.md) | 中文
+
 [![GitHub stars](https://img.shields.io/github/stars/Cthus/prompt-converter?style=social)](https://github.com/Cthus/prompt-converter)
 [![Release](https://img.shields.io/github/v/release/Cthus/prompt-converter)](https://github.com/Cthus/prompt-converter/releases/tag/v0.2.0)
 [![License](https://img.shields.io/github/license/Cthus/prompt-converter)](./LICENSE)
 [![Hermes](https://img.shields.io/badge/Hermes-Skill-blue)](https://github.com/Cthus/prompt-converter)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-VSCode-purple)](https://github.com/Cthus/prompt-converter)
 
-> ⭐ 点个 Star 就是最装逼的支持 — 把随口一句任务，转换成可编辑的 7 段式结构化 Prompt，确认后再执行。Hermes + Claude Code 双端通用。
+> 将自然语言任务转化为可编辑、可审查的 7 段式结构化 Prompt，确认后再执行。兼容 Hermes 与 Claude Code，双端通用。
 
 将模糊的自然语言输入，标准化为可审查、可复用的结构化 Prompt。内置三档智能识别 + AskUserQuestion 确认，显著减少歧义返工。
 
