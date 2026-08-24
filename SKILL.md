@@ -1,23 +1,26 @@
 ---
 name: prompt-converter
-description: Convert task inputs into editable structured prompt.
-version: 0.2.0
+description: Score every user message and convert tasks to prompts.
+version: 0.2.1
 author: Hermes Agent
 license: MIT
 platforms: [linux, macos, windows]
 metadata:
   hermes:
-    tags: [prompt, converter, workflow, efficiency]
+    tags: [prompt, converter, workflow, every-message, scoring, AskUserQuestion]
     related_skills: []
 ---
 
 # Prompt Converter Skill
 
-把任务/动手类输入转换成结构化的、可编辑的 Prompt，等待用户二次确认后执行。问答/寒暄/澄清类不触发。
+> **CRITICAL: 新会话首条也必须执行本 Skill。** 每轮对话的每条用户消息，无论新旧会话，都必须先执行 Step 0 打分。
+
+把任务/动手类输入转换成结构化的、可编辑的 Prompt，等待用户二次确认后执行。问答/寒暄/澄清类不触发但仍需打分展示。
 
 ## When to Use
 
-- 收到**任务类 / 动手类**输入（改代码、加 MCP 工具、跑桌面/浏览器操作、指向明确交付物）时触发
+- **EVERY MESSAGE in EVERY CONVERSATION** — 收到任何用户消息时首先执行本 Skill 的 Step 0 打分（新会话首条也不例外）
+- 收到**任务类 / 动手类**输入（改代码、加 MCP 工具、跑桌面/浏览器操作、指向明确交付物）时进入 Step 1 转换
 - 用户显式说 `转prompt`、`/p`、`/prompt` 时无视分数强制转换
 - Don't use for: 概念问答（A和B区别/哪个更好）、寒暄、澄清类、已是结构化 Prompt（包含 Role/Goal/Constraints）时直接回答/执行，不触发转换
 - 例外：用户本轮已是结构化草稿或明确放行信号（ok/yes/直接指令）时跳过转换与确认直接执行
