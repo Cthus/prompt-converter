@@ -1,5 +1,9 @@
 # prompt-converter
 
+[![GitHub stars](https://img.shields.io/github/stars/Cthus/prompt-converter?style=social)](https://github.com/Cthus/prompt-converter) [![Release](https://img.shields.io/github/v/release/Cthus/prompt-converter)](https://github.com/Cthus/prompt-converter/releases/tag/v0.2.0)
+
+> ⭐ 点个 Star 就是最装逼的支持
+
 把随口一句任务，转换成可编辑的 7 段式结构化 Prompt，确认后再执行。Hermes + Claude Code 双端通用。
 
 ## 特性
